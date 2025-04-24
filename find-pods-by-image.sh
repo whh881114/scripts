@@ -1,6 +1,26 @@
 #!/bin/bash
+#
+# find-pods-by-image.sh
+#
+# 描述:
+#   在所有命名空间中查找使用特定镜像关键字的 Pod。
+#   适用于 Kubernetes 环境，依赖 kubectl 和 jq。
+#
+# 用法:
+#   ./find-pods-by-image.sh <镜像名称关键字>
+#
+# 示例:
+#   ./find-pods-by-image.sh nginx
+#
+# 依赖:
+#   - kubectl
+#   - jq
+#
+# 作者: chatgpt
+# 日期: 2025-04-24
+#
 
-# 检查是否提供了镜像名称关键字参数
+
 if [ -z "$1" ]; then
   echo "用法: $0 <镜像名称关键字>"
   exit 1
